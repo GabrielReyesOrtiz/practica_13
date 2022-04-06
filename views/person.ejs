@@ -1,0 +1,26 @@
+<html>
+     <head>
+       <link href="assets/style.css" type="text/css" rel="stylesheet" />
+     </head>
+    <body>
+<!-- vamos a preguntar primero si el numero es par-->
+        <%if(ID % 2 == 0){%>  
+                    <h1>El numero <%= ID %> es par</h1> 
+                    <ul>  <!-- Iniciamos ciclo for para imprimir n*2 veces nuestro numero par -->                   
+                        <%for(let i = 0; i < (ID * 2); i++){%> 
+                            <li> Es par</li>   <!-- Le pasamos el numero ID -->
+                        <%}%>
+                    </ul>
+                        <%}else{%>  <!-- De lo contrario es impar -->
+                    <h1>El numero <%= ID %> es impar</h1>
+                    <ul>  <!-- Iniciamos ciclo for para imprimir n veces nuestro numero impar --> 
+                        <%for(let i = 0; i < ID; i++){%>  
+                            <li> Es impar</li>
+                        <%}%>
+                    </ul>
+                        <%}%>
+    </body>  <!-- Aqui cerramos el body--> 
+
+</html>
+
+
